@@ -16,7 +16,6 @@ function init(){
 
     const fov = 35;
     const aspect = container.clientWidth / container.clientHeight;
-
     // definimos los límites de visión (en metros)
     const near = 0.1;
     const far = 1000;
@@ -24,6 +23,7 @@ function init(){
     // Set up camera
     camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     camera.position.set(0,3,30);
+   
 
     // Luces para poder ver algo
     const ambient = new THREE.AmbientLight(0x404040, 1);
@@ -41,6 +41,10 @@ function init(){
     // esto añade todo lo que hemos creado al HTML
     container.appendChild(renderer.domElement);
 
+    // Controls
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.addEventListener('change', renderer);
+
     // Load model
     let  loader = new THREE.GLTFLoader();
     loader.load('./house/scene.gltf', function(gltf){
@@ -56,8 +60,6 @@ function init(){
         renderer.render(scene, camera);
     }
 }
-
-
 
 init();
 
