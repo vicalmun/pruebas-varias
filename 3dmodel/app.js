@@ -22,7 +22,7 @@ function init(){
 
     // Set up camera
     camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0,3,30);
+    camera.position.set(0,3,20);
    
 
     // Luces para poder ver algo
@@ -30,7 +30,7 @@ function init(){
     scene.add(ambient);
 
     const light = new THREE.DirectionalLight(0xffffff,2);
-    light.position.set(10,10,10);
+    light.position.set(20,20,20);
     scene.add(light);
 
     // Renderer
@@ -47,7 +47,7 @@ function init(){
 
     // Load model
     let  loader = new THREE.GLTFLoader();
-    loader.load('./house/scene.gltf', function(gltf){
+    loader.load('./marina/scene.gltf', function(gltf){
         // Aquí añadimos el modelo a la escena
         scene.add(gltf.scene);
         house = gltf.scene.children[0];

@@ -7,7 +7,8 @@
 body{
     font-family: sans-serif;
     overflow: hidden;
-    background-color: rgb(77, 77, 77, 0.4);
+    background-color: rgba(56, 185, 95, 0.699);
+    /* background-color: rgb(77, 77, 77, 0.4); */
 }
 
 .scene, canvas{
