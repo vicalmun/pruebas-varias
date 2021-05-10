@@ -13,7 +13,7 @@ const controller = new ScrollMagic.Controller();
 // Todo lo que queremos 'animar' va en la escena
 // otra seccion de animaciones => otra escena ¿esto es así?
 let scene = new ScrollMagic.Scene({
-    duration: 7500, //es la duración de la animacion que se traduce en px de altura en la web
+    duration: 4000, //es la duración de la animacion que se traduce en px de altura en la web
     // Si dura 9 segundos el varlor de duration es 9000 (entiendo que ms)
     triggerElement: intro,
     triggerHook: 0 // posicion relativa (0=inicio, 1=final) del indicador
